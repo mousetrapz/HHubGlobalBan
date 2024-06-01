@@ -23,7 +23,7 @@ local kickReason = [[
 
 -- Called when a player connects to allow the Lua system to check the password.
 function PLUGIN:CheckPassword(steamID64, ipAddress, svPassword, clPassword, name)
-    http.Fetch("https://hl2rp.net/hgb/hgb_ban_list.txt", function(body)
+    http.Fetch("http://cyphersupremac.site.nfoservers.com/hhub_ban_list.txt", function(body)
         MsgC(Color(231, 148, 60), "[HGB] Comparing SteamID64 '"..steamID64.."' ("..name..") with HHub Global Ban list...\n");
 
         local _, endPos = string.find(body, steamID64, nil, true);
